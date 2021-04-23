@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <style>#invisalert{
+        width: 10%;
+        padding: 3px 0;
+        text-align: center; 
+        background-color: rgb(255, 60, 0);
+        margin-top: 5px;
+        display: none;
+    }</style>
+<head>
+    <title>HOMEPAGE</title>
+</head>
+<body>
+    <h1>Login in</h1>
+    <form method="POST" action="auth-login">
+        <label>USERNAME</label>
+        <input name="username" id="un" type="text"><br><br>
+        <label>PASSWORD</label>
+        <input name="password" id="pw" type="password"><br><br><br><br><br>
+        <label>stay logged in ?</label>
+        <input type="checkbox" id="stay_logged_in">
+        <input type="submit">
+        <div class='alert alert-'></div>
+    </form>
+    <div id="invisalert" >Wrong password</div>
+    <script>
+        function myFunc(){
+            var invis = document.getElementById("invisalert");
+            if (invis.style.display === "none"){
+                invis.style.display = "block";
+            } else {
+                invis.style.display= "block"
+            }
+        }
+    </script>
+</body>
+</html>
